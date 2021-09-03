@@ -1,0 +1,37 @@
+*{  
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+.heading{
+    text-align: center;
+}
+#player-status{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#game-div{
+    width: 200px;
+    height: 180px;
+    margin: auto;
+    border: 2px solid black;
+    display: flex;
+}
+.game-box{
+    width: 40px;
+    height: 30px;
+    padding-top: 10px;
+    margin: 11px;
+    border: 2px solid black;
+}
+#game-status{
+    margin-top: 20px;
+    text-align: center;
+}
+.reset-container{
+    margin-left: auto;
+    margin-top: 30px;
+}
