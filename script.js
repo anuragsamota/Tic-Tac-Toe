@@ -46,8 +46,7 @@ function game(element){
             player2_moves.push(parseInt(element.id,10))
         }
         player_status.innerHTML = current_player + " Move"
-        player1_moves_str += player1_moves[move_counter]
-        player2_moves_str += player2_moves[move_counter]
+        
         move_counter++
         if(move_counter>=9){
             player_status.innerHTML = "Moves Completed"
@@ -59,24 +58,30 @@ function game(element){
         alert("invalid move")
     }
     occupied_moves.push(element.id)
-    winCheck()
+    winCheck(element)
     drawCheck()
 }
-function winCheck(){
+function winCheck(element){
     //sorting player 1 and 2 array
     player1_moves.sort(function(a,b){return a-b})
     player2_moves.sort(function(a,b){return a-b})
+    player1_moves_str = ""
+    player2_moves_str = ""
+    for(i=0;i<player1_moves.length;i++){
+        player1_moves_str += player1_moves[i]
+    }
+    for(i=0;i<player2_moves.length;i++){
+        player2_moves_str += player2_moves[i]
+    }
     //player 1
     for(i=0;i<win_conditions.length;i++){
         if(player1_moves_str == win_conditions[i]){
-            console.log("func 1 called")
             player1_win = true
         }
     }
     //player 2
     for(i=0;i<win_conditions.length;i++){
         if(player2_moves_str == win_conditions[i]){
-            console.log("func 2 called")
             player2_win = true
         }
     }
@@ -100,5 +105,3 @@ function drawCheck(){
     }
     game_status.innerHTML = match_staus
 }
-
-//problem is with players_moves_str
