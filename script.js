@@ -46,6 +46,8 @@ function game(element){
             player2_moves.push(parseInt(element.id,10))
         }
         player_status.innerHTML = current_player + " Move"
+        player1_moves_str += player1_moves[move_counter]
+        player2_moves_str += player2_moves[move_counter]
         move_counter++
         if(move_counter>=9){
             player_status.innerHTML = "Moves Completed"
@@ -64,10 +66,6 @@ function winCheck(){
     //sorting player 1 and 2 array
     player1_moves.sort(function(a,b){return a-b})
     player2_moves.sort(function(a,b){return a-b})
-    
-
-    player1_moves_str += player1_moves[move_counter]
-    player2_moves_str += player2_moves[move_counter]
     //player 1
     for(i=0;i<win_conditions.length;i++){
         if(player1_moves_str == win_conditions[i]){
