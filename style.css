@@ -1,12 +1,16 @@
-*{  
+*{
     margin: 0;
     padding: 0;
 }
 body{
     text-align: center;
+    background: #333;
+    color: white;
+    font-family: consolas;
 }
 .heading{
     text-align: center;
+    color: #55f;
 }
 #player-status{
     margin-top: 20px;
@@ -14,18 +18,22 @@ body{
     text-align: center;
 }
 #game-div{
-    width: 200px;
-    height: 180px;
+    width: 180px;
+    height: auto;
     margin: auto;
-    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #0dd;
     display: flex;
 }
 .game-box{
     width: 40px;
-    height: 30px;
-    padding-top: 10px;
-    margin: 11px;
-    border: 2px solid black;
+    height: 35px;
+    padding-top: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    background: #d0d;
+    color: cyan;
+    font-size: 25px;
 }
 #game-status{
     margin-top: 20px;
@@ -34,4 +42,13 @@ body{
 .reset-container{
     margin-left: auto;
     margin-top: 30px;
+}
+#reset-button{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid cyan;
+    color: cyan;
+    background-color: #333;
+
 }
